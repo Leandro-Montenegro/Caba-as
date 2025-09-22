@@ -1,3 +1,5 @@
+package cabana;
+
 public class Premium extends Cabania {
 
     public Premium(String nombreCabania, double precioNoche, int capacidadPersonas) {

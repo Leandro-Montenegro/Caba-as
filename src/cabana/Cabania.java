@@ -1,3 +1,6 @@
+package cabana;
+
+
 public abstract class Cabania {
     protected String nombre;           
     protected double precioPorNoche;   

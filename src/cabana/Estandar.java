@@ -1,3 +1,4 @@
+package cabana;
 public class Estandar extends Cabania {
     
     public Estandar(String nombreCabania, double precioNoche, int capacidadPersonas) {

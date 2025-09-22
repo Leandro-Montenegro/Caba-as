@@ -1,3 +1,4 @@
+package cabana;
 public class Gold extends Cabania {
     
     public Gold(String nombreCabania, double precioNoche, int capacidadPersonas) {
