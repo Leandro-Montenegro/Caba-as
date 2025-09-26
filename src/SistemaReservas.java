@@ -7,16 +7,13 @@ import java.util.Scanner;
 
 import java.util.InputMismatchException;
 
-/*
- * Sistema de gestión de reservas de cabañas.
- * Permite a los clientes ver los tipos de cabañas,
- * realizar reservas y gestionar las reservas existentes.
- */
+/* Permite a los clientes ver los tipos de cabañas,
+   realizar reservas y gestionar las reservas existentes.*/
+   
 public class SistemaReservas {
     // Escáner para la entrada del usuario en toda la clase
     private static Scanner scanner = new Scanner(System.in);
     
-    // Lista para almacenar los tipos de cabañas disponibles
     private static ArrayList<Cabania> tiposCabanias = new ArrayList<>();
     
     // Instancia de la interfaz de almacenamiento de reservas
@@ -27,9 +24,7 @@ public class SistemaReservas {
         mostrarMenuCliente();
     }
     
-    /**
-     * Inicializa los tipos de cabañas disponibles en el sistema.
-     */
+    /* Inicializa los tipos de cabañas disponibles en el sistema.*/
     private static void inicializarTiposCabanias() {
         try {
             tiposCabanias.add(new Gold("Cabaña Gold", 500.0, 4));
@@ -41,9 +36,7 @@ public class SistemaReservas {
         }
     }
     
-    /**
-     * Muestra el menú principal para el cliente y gestiona las opciones.
-     */
+    /* Muestra el menú principal para el cliente y gestiona las opciones. */
     private static void mostrarMenuCliente() {
         int opcion = 0;
         
@@ -88,9 +81,7 @@ public class SistemaReservas {
         } while (opcion != 0);
     }
     
-    /**
-     * Muestra una lista de las cabañas disponibles.
-     */
+    /* Muestra una lista de las cabañas disponibles. */
     private static void verCabanasDisponibles() {
         System.out.println("\n--- CABAÑAS DISPONIBLES ---");
         for (int i = 0; i < tiposCabanias.size(); i++) {
@@ -98,9 +89,7 @@ public class SistemaReservas {
         }
     }
     
-    /**
-     * Permite al usuario ver los detalles completos de una cabaña específica.
-     */
+    /* Permite al usuario ver los detalles completos de una cabaña específica. */
     private static void verDetallesCabana() {
         try {
             verCabanasDisponibles();
@@ -119,9 +108,7 @@ public class SistemaReservas {
         }
     }
 
-    /**
-     * Guía al cliente a través del proceso de realizar una reserva.
-     */
+    /* Guía al cliente a través del proceso de realizar una reserva. */
     private static void realizarReserva() {
         try {
             System.out.println("\n--- REALIZAR UNA RESERVA ---");
@@ -182,9 +169,7 @@ public class SistemaReservas {
         }
     }
 
-    /**
-     * Muestra un sub-menú para gestionar las reservas existentes.
-     */
+    /* Muestra un sub-menú para gestionar las reservas existentes. */
     private static void gestionarReservas() {
         int opcionCrud = 0;
         do {
@@ -221,9 +206,7 @@ public class SistemaReservas {
         } while (opcionCrud != 0);
     }
 
-    /**
-     * Muestra todas las reservas guardadas en el almacenamiento.
-     */
+    /* Muestra todas las reservas guardadas en el almacenamiento. */
     private static void verTodasLasReservas() {
         System.out.println("\n--- LISTA DE RESERVAS REALIZADAS ---");
         List<String> reservas = reservaAlmacenamiento.obtenerTodasLasReservas();
@@ -236,9 +219,7 @@ public class SistemaReservas {
         }
     }
 
-    /**
-     * Permite eliminar una reserva específica por su índice.
-     */
+    /* Permite eliminar una reserva específica por su índice. */
     private static void eliminarReserva() {
         verTodasLasReservas();
         List<String> reservas = reservaAlmacenamiento.obtenerTodasLasReservas();
@@ -261,9 +242,7 @@ public class SistemaReservas {
         }
     }
 
-    /**
-     * Permite actualizar una reserva específica por su índice.
-     */
+    /* Permite actualizar una reserva específica por su índice. */
     private static void actualizarReserva() {
         verTodasLasReservas();
         List<String> reservas = reservaAlmacenamiento.obtenerTodasLasReservas();
