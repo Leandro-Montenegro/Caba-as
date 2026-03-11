@@ -1,1 +1,1 @@
-Proyecto de Sistema de reservas para cabañas desde el punto de vista del cliente con JAVA aplicando el paradigma orientado a objetos.
+Proyecto de Sistema de reservas para cabañas con JAVA aplicando el paradigma orientado a objetos.
